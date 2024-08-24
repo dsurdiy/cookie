@@ -1,6 +1,6 @@
 // Colors
 $mainTextColor: #000000;
-// $secondaryTextColor: #ffffff;
+$secondaryTextColor: #ffffff;
 // $accentColor: #026aa2;
 // $mainBgColor: #065986;
 // $secondaryBgColor: #0086c9;
@@ -11,3 +11,11 @@ $tablet: 991.98;
 $mobile: 767.98;
 $mobileMedium: 574.98;
 $mobileSmall: 479.98;
+
+// Fonts
+$mainFont: "Kollektif", sans-serif;
+$secondaryFont: "Lena", sans-serif;
+
+// Background
+$mainBg: #fff;
+$secondaryBg: linear-gradient(135deg, rgba(224, 147, 160, 0.46) 0%, rgba(236, 221, 206, 1) 100%);

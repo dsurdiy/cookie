@@ -7,16 +7,19 @@
    > main {
       flex: 1 1 auto;
    }
+
+   max-width: toRem(1466);
+   margin: 0 auto;
 }
 
 [class*="__container"] {
-   max-width: toRem(1230);
+   max-width: toRem(1270);
    margin: 0 auto;
    padding: 0 toRem(15);
 }
 
 body {
-   font-family: "Kollektif", sans-serif;
+   font-family: $mainFont;
    font-size: toRem(18);
    color: $mainTextColor;
 }
