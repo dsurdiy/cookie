@@ -1,16 +1,39 @@
 .title-block {
    max-width: toRem(733);
    padding-left: toRem(158);
+   padding-right: toRem(15);
    font-size: toRem(40);
    color: $secondaryTextColor;
-   background-color: #000;
+   background-color: $secondaryBg;
    line-height: 1.17;
    font-weight: 700;
+   transform: translate(toRem(-145), 50%);
 
    span {
       font-family: $secondaryFont;
       font-size: toRem(41);
       font-weight: 400;
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(32);
+      }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(28);
+      }
+   }
+   @media (max-width: toEm($pc)) {
+      transform: translate(toRem(-15), 50%);
+      max-width: 50%;
+      padding-left: toRem(30);
+   }
+   @media (max-width: toEm($tablet)) {
+      font-size: toRem(32);
+   }
+   @media (max-width: toEm($mobile)) {
+      font-size: toRem(28);
+      line-height: 1;
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      max-width: 90%;
    }
 }
 
@@ -19,7 +42,7 @@
 .hero {
    // .hero__top
    &__top {
-      background: $secondaryBg;
+      background: $secondaryBgGradient;
       &:not(:last-child) {
          margin-bottom: toRem(210);
          @media (max-width: toEm($pc)) {
@@ -160,3 +183,102 @@
 }
 
 // =============================================================================================================
+
+.actions {
+   padding: toRem(75) 0 toRem(100);
+   background-color: $mainBg;
+   @media (max-width: toEm($pc)) {
+      padding: toRem(70) 0;
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(50) 0;
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(40) 0;
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding: toRem(30) 0;
+   }
+   // .actions__container
+   &__container {
+      max-width: toRem(705);
+      text-align: center;
+   }
+   // .actions__title
+   &__title {
+      font-size: toRem(40);
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: capitalize;
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(30);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(26);
+      }
+      span {
+         font-family: $secondaryFont;
+         font-weight: 400;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(50);
+         @media (max-width: toEm($pc)) {
+            margin-bottom: toRem(35);
+         }
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(25);
+         }
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(20);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(10);
+         }
+      }
+   }
+   // .actions__text
+   &__text {
+      line-height: 1.67;
+      @media (max-width: toEm($mobileSmall)) {
+         line-height: 1.4;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(90);
+         @media (max-width: toEm($pc)) {
+            margin-bottom: toRem(50);
+         }
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(30);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(15);
+         }
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(5);
+         }
+      }
+   }
+   // .actions__link
+   &__link {
+      display: block;
+      padding: toRem(7.5) toRem(20);
+      border: toRem(1) solid #000;
+      border-radius: toRem(3);
+      font-size: toRem(20);
+      font-weight: 700;
+      line-height: 1.2;
+      transition: all 0.3s;
+      span {
+         font-family: $secondaryFont;
+         font-weight: 400;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $secondaryTextColor;
+            background-color: $secondaryBg;
+         }
+      }
+   }
+}
