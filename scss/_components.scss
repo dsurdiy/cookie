@@ -1,19 +1,20 @@
 .title-block {
    max-width: toRem(733);
+   width: 100%;
    padding-left: toRem(158);
    padding-right: toRem(15);
+   padding: toRem(21) toRem(15) toRem(21) toRem(158);
    font-size: toRem(40);
    color: $secondaryTextColor;
    background-color: $secondaryBg;
-   line-height: 1.17;
+   line-height: 1.14;
    font-weight: 700;
-   transform: translate(toRem(-145), 50%);
 
    span {
       font-family: $secondaryFont;
       font-size: toRem(41);
       font-weight: 400;
-      @media (max-width: toEm($tablet)) {
+      @media (max-width: toEm($pc)) {
          font-size: toRem(32);
       }
       @media (max-width: toEm($mobile)) {
@@ -21,19 +22,17 @@
       }
    }
    @media (max-width: toEm($pc)) {
-      transform: translate(toRem(-15), 50%);
       max-width: 50%;
-      padding-left: toRem(30);
-   }
-   @media (max-width: toEm($tablet)) {
+      padding: toRem(10) toRem(15);
+      text-align: center;
       font-size: toRem(32);
    }
    @media (max-width: toEm($mobile)) {
       font-size: toRem(28);
       line-height: 1;
+      max-width: toRem(480);
    }
    @media (max-width: toEm($mobileSmall)) {
-      max-width: 90%;
    }
 }
 
