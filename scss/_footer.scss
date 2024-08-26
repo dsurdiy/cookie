@@ -139,6 +139,9 @@
             text-decoration-color: inherit;
          }
       }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(16);
+      }
    }
 }
 

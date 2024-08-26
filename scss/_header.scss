@@ -61,5 +61,8 @@
             border-color: inherit;
          }
       }
+      @media (max-width: toEm($mobile)) {
+         padding-bottom: 0;
+      }
    }
 }
