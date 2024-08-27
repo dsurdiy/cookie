@@ -8,6 +8,9 @@
    // .page__locations
    &__locations {
    }
+   // .page__job
+   &__job {
+   }
 }
 
 // =============================================================================================================
@@ -440,3 +443,64 @@
 }
 
 // =============================================================================================================
+
+.job {
+   // .job__items
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   // .job__item
+   &__item {
+      flex: 0 1 50%;
+      padding: toRem(90) toRem(190) toRem(130);
+      text-align: center;
+      &:nth-child(odd) {
+         background-color: $mainBg;
+      }
+      &:nth-child(even) {
+         background-color: #f4d8dd;
+      }
+   }
+   // .job__title
+   &__title {
+      font-size: toRem(40);
+      font-weight: 700;
+      line-height: 1.2;
+      &:not(:last-child) {
+         margin-bottom: toRem(70);
+      }
+      span {
+         font-family: $secondaryFont;
+         font-weight: 400;
+      }
+   }
+   // .job__text
+   &__text {
+      line-height: 1.67;
+      &:not(:last-child) {
+         margin-bottom: toRem(115);
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(10);
+         }
+      }
+   }
+   // .job__link
+   &__link {
+      padding: toRem(11) toRem(20);
+      min-width: toRem(297);
+      font-size: toRem(20);
+      font-family: $secondaryFont;
+      border: toRem(1) solid #000;
+      border-radius: toRem(3);
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $secondaryTextColor;
+            background-color: $secondaryBg;
+         }
+      }
+   }
+}
