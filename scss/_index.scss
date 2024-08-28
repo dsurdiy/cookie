@@ -26,7 +26,7 @@
       padding: toRem(120) 0;
    }
    @media (max-width: toEm($mobileSmall)) {
-      padding: toRem(80) 0;
+      padding: toRem(100) 0;
    }
    // .homepage-hero__container
    &__container {
@@ -448,18 +448,38 @@
    // .job__items
    &__items {
       display: flex;
-      flex-wrap: wrap;
+      @media (max-width: toEm($mobile)) {
+         flex-direction: column;
+      }
    }
    // .job__item
    &__item {
       flex: 0 1 50%;
-      padding: toRem(90) toRem(190) toRem(130);
+      padding: toRem(90) toRem(15) toRem(130);
       text-align: center;
       &:nth-child(odd) {
          background-color: $mainBg;
       }
       &:nth-child(even) {
          background-color: #f4d8dd;
+      }
+      @media (max-width: toEm($pc)) {
+         padding: toRem(90) toRem(15);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(70) toRem(15);
+      }
+      @media (max-width: toEm($mobile)) {
+         flex: 0 1 100%;
+         padding: toRem(30) toRem(15);
+      }
+   }
+   // .job__content
+   &__content {
+      max-width: toRem(340);
+      margin: 0 auto;
+      @media (max-width: toEm($mobile)) {
+         max-width: 100%;
       }
    }
    // .job__title
@@ -469,17 +489,38 @@
       line-height: 1.2;
       &:not(:last-child) {
          margin-bottom: toRem(70);
+         @media (max-width: toEm($pc)) {
+            margin-bottom: toRem(35);
+         }
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(15);
+         }
       }
       span {
          font-family: $secondaryFont;
          font-weight: 400;
       }
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(32);
+      }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(26);
+      }
    }
    // .job__text
    &__text {
       line-height: 1.67;
+      @media (max-width: toEm($mobileSmall)) {
+         line-height: 1.4;
+      }
       &:not(:last-child) {
          margin-bottom: toRem(115);
+         @media (max-width: toEm($pc)) {
+            margin-bottom: toRem(50);
+         }
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(25);
+         }
       }
       p {
          &:not(:last-child) {
@@ -502,5 +543,11 @@
             background-color: $secondaryBg;
          }
       }
+      @media (max-width: toEm($mobileSmall)) {
+         width: 100%;
+         font-size: toRem(18);
+      }
    }
 }
+
+// =============================================================================================================
