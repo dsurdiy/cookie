@@ -70,10 +70,7 @@
          padding: toRem(120) toRem(0);
       }
       @media (max-width: toEm($mobile)) {
-         padding: toRem(80) toRem(0);
-      }
-      @media (max-width: toEm($mobileSmall)) {
-         padding: toRem(50) toRem(0);
+         padding: toRem(100) toRem(0);
       }
    }
    // .hero__wrapper
