@@ -1,0 +1,15 @@
+.page {
+   // .page__franchising-hero
+   &__franchising-hero {
+      padding-bottom: toRem(115);
+      @media (max-width: toEm($pc)) {
+         padding-bottom: toRem(90);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding-bottom: toRem(70);
+      }
+      @media (max-width: toEm($mobile)) {
+         padding-bottom: toRem(40);
+      }
+   }
+}
