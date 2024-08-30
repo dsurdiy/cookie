@@ -12,4 +12,164 @@
          padding-bottom: toRem(40);
       }
    }
+   // .page__how
+   &__how {
+   }
 }
+
+// =============================================================================================================
+
+.how {
+   position: relative;
+   background: $mainBgGradient;
+   padding: toRem(150) 0 toRem(190);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(90) 0;
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) 0;
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(50) 0;
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding-top: 0;
+      padding-bottom: toRem(30);
+   }
+   // .how__container
+   &__container {
+   }
+   // .how__title-block
+   &__title-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+      @media (max-width: toEm($mobileSmall)) {
+         position: relative;
+         transform: translateY(0%);
+         margin: 0 toRem(-15);
+         width: 110%;
+         &:not(:last-child) {
+            margin-bottom: toRem(20);
+         }
+      }
+   }
+   // .how__items
+   &__items {
+      max-width: toRem(1160);
+      margin-left: auto;
+      display: grid;
+      row-gap: toRem(85);
+      @media (max-width: toEm(1290)) {
+         row-gap: toRem(50);
+      }
+      @media (max-width: toEm($tablet)) {
+         row-gap: toRem(35);
+      }
+      @media (max-width: toEm($mobile)) {
+         row-gap: toRem(20);
+      }
+   }
+   // .how__item
+   &__item {
+      position: relative;
+      background-color: $mainBg;
+      padding: toRem(37) toRem(85) toRem(68) toRem(175);
+      &::before {
+         content: "";
+         position: absolute;
+         top: toRem(60);
+         left: 0;
+         width: toRem(4);
+         height: 100%;
+         background-color: #000;
+         @media (max-width: toEm($mobile)) {
+            top: toRem(50);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            top: toRem(40);
+         }
+      }
+      &:last-child {
+         &::before {
+            display: none;
+         }
+      }
+      @media (max-width: toEm(1290)) {
+         padding: toRem(35) toRem(50) toRem(35) toRem(140);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(25) toRem(25) toRem(25) toRem(130);
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(20) toRem(20) toRem(20) toRem(110);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(12) toRem(12) toRem(12) toRem(85);
+      }
+   }
+   // .how__label
+   &__label {
+      position: absolute;
+      top: toRem(-30);
+      left: toRem(-85);
+      font-size: toRem(30);
+      font-weight: 700;
+      line-height: 1.2;
+      color: $secondaryTextColor;
+      text-transform: uppercase;
+      background-color: #000;
+      padding: toRem(27) toRem(40);
+      @media (max-width: toEm(1290)) {
+         padding: toRem(15) toRem(20);
+         top: 0;
+         left: toRem(-15);
+         font-size: toRem(25);
+      }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(20);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(10);
+      }
+   }
+   // .how__title
+   &__title {
+      font-size: toRem(30);
+      font-weight: 700;
+      line-height: 1.2;
+      &:not(:last-child) {
+         margin-bottom: toRem(13);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(8);
+         }
+      }
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(26);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(23);
+      }
+   }
+   // .how__text
+   &__text {
+      line-height: 1.67;
+      @media (max-width: toEm($mobileSmall)) {
+         line-height: 1.4;
+      }
+      @media (max-width: toEm(275)) {
+         line-height: 1.2;
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(10);
+            @media (max-width: toEm($mobileSmall)) {
+               margin-bottom: toRem(5);
+            }
+         }
+      }
+   }
+}
+
+// =============================================================================================================
