@@ -12,4 +12,201 @@
          padding-bottom: toRem(40);
       }
    }
+   // .page__open-jobs
+   &__open-jobs {
+   }
 }
+
+// =============================================================================================================
+
+.open-jobs {
+   position: relative;
+   background: $mainBgGradient;
+   padding: toRem(145) 0 toRem(115);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(90) 0;
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) 0;
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(50) 0;
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding-top: 0;
+      padding-bottom: toRem(30);
+   }
+   // .open-jobs__container
+   &__container {
+   }
+   // .open-jobs__title-block
+   &__title-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+      @media (max-width: toEm($mobileSmall)) {
+         position: relative;
+         transform: translateY(0%);
+         margin: 0 toRem(-15);
+         width: 110%;
+         &:not(:last-child) {
+            margin-bottom: toRem(20);
+         }
+      }
+   }
+   // .open-jobs__items
+   &__items {
+      max-width: toRem(1160);
+      margin: 0 auto;
+      padding: toRem(75);
+      background-color: $mainBg;
+      text-align: center;
+      @media (max-width: toEm($pc)) {
+         margin-left: toRem(-15);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(35) toRem(15);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(20) toRem(15);
+      }
+   }
+   // .open-jobs__inner
+   &__inner {
+      &:not(:last-child) {
+         margin-bottom: toRem(70);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(35);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(25);
+         }
+      }
+   }
+   // .open-jobs__item
+   &__item {
+   }
+   // .open-jobs__link
+   &__link {
+      min-width: toRem(244);
+      margin: 0 auto;
+      padding: toRem(9) toRem(20);
+      border: toRem(1) solid #000;
+      border-radius: toRem(3);
+      font-size: toRem(20);
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      transition: all 0.3s;
+      span {
+         font-family: $secondaryFont;
+         font-weight: 400;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $secondaryTextColor;
+            background-color: $secondaryBg;
+         }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         min-width: 100%;
+      }
+   }
+}
+
+.faq-item {
+   border-top: toRem(2) solid rgba(0, 0, 0, 0.3);
+   padding: toRem(16) toRem(27) toRem(8) toRem(21);
+   text-align: left;
+   &:not(:last-child) {
+      margin-bottom: toRem(13);
+      @media (max-width: toEm($tablet)) {
+         margin-bottom: toRem(7);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         margin-bottom: 0;
+      }
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(10);
+   }
+   // .faq-item__input
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      appearance: none;
+   }
+   // .faq-item__title
+   &__title {
+      cursor: pointer;
+      font-size: toRem(25);
+      font-weight: 700;
+      line-height: 1.2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: toRem(30);
+      &::after {
+         content: "";
+         flex: 0 0 toRem(20);
+         width: toRem(20);
+         height: toRem(9);
+         background: url("../img/icons/faq-arrow.svg") 0 0 / contain no-repeat;
+         transition: transform 0.3s;
+         .faq-item__input:checked ~ & {
+            transform: rotate(180deg);
+         }
+      }
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(22);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(20);
+      }
+   }
+   // .faq-item__text
+   &__text {
+      display: none;
+      margin-top: toRem(30);
+      padding-right: toRem(70);
+      line-height: 1.67;
+      .faq-item__input:checked ~ & {
+         display: block;
+      }
+      @media (max-width: toEm($tablet)) {
+         margin-top: toRem(20);
+         padding-right: toRem(35);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         line-height: 1.4;
+         padding-right: 0;
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(30);
+            @media (max-width: toEm($tablet)) {
+               margin-bottom: toRem(10);
+            }
+         }
+      }
+      h5 {
+         font-weight: 700;
+      }
+      ul {
+         margin-left: toRem(18);
+         &:not(:last-child) {
+            margin-bottom: toRem(30);
+            @media (max-width: toEm($tablet)) {
+               margin-bottom: toRem(10);
+            }
+         }
+      }
+      li {
+         list-style-type: disc;
+      }
+   }
+}
+
+// =============================================================================================================
