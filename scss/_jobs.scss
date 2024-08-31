@@ -1,0 +1,15 @@
+.page {
+   // .page__jobs-hero
+   &__jobs-hero {
+      padding-bottom: toRem(160);
+      @media (max-width: toEm($pc)) {
+         padding-bottom: toRem(100);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding-bottom: toRem(70);
+      }
+      @media (max-width: toEm($mobile)) {
+         padding-bottom: toRem(40);
+      }
+   }
+}
