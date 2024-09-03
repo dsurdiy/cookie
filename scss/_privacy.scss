@@ -1,0 +1,30 @@
+.page {
+   // .page__container
+   &__container {
+      padding: toRem(110) toRem(15);
+      @media (max-width: toEm($pc)) {
+         padding: toRem(70) toRem(15);
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(40) toRem(15);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(30) toRem(15);
+      }
+   }
+   // .page__text
+   &__text {
+      line-height: 1.67;
+      @media (max-width: toEm($mobileSmall)) {
+         line-height: 1.4;
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(30);
+            @media (max-width: toEm($mobile)) {
+               margin-bottom: toRem(15);
+            }
+         }
+      }
+   }
+}
